@@ -71,6 +71,18 @@ tweet({
 	status: 'Happy birthday @twitter!',
 	in_reply_to_status_id: '579328173764014080'
 })
+
+tweet('why is the sky blue?', function (err, res) {
+	if (err) throw err
+	else console.log(res)
+})
+
+tweet({
+	status: 'People comment "lol" even when they do not laugh.'
+}, function (err, res) {
+	if (err) throw err
+	else console.log(res)
+})
 ```
 
 # install
