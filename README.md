@@ -3,7 +3,7 @@ tweet-tweet
 
 A no-nonsense api for posting tweets.
 
-This is *only* for updating your twitter status. This does not get tweets, or stream search results.
+This is *only* for updating your Twitter status. This does not get tweets, or stream search results.
 
 Images and videos are not supported.
 
@@ -34,7 +34,7 @@ var TweetTweet = require('tweet-tweet')
 
 ## `TweetTweet(auth)`
 
-If you don't know how to get the tokens and secrets from twitter, see [AUTHENTICATION.md](https://github.com/ArtskydJ/tweet-tweet/blob/master/AUTHENTICATION.md) for detailed instructions.
+If you don't know how to get the tokens and secrets from Twitter, see [AUTHENTICATION.md](https://github.com/ArtskydJ/tweet-tweet/blob/master/AUTHENTICATION.md) for detailed instructions.
 
 - `auth` is an object with the following properties, all of which are required:
 	- `consumerKey`
@@ -56,9 +56,9 @@ If you don't know how to get the tokens and secrets from twitter, see [AUTHENTIC
 
 ```js
 // Status string vs. status object
-tweet('i like twitter')
+tweet('i like Twitter')
 // Equivalent
-tweet({ status: 'i like twitter' })
+tweet({ status: 'i like Twitter' })
 
 
 // Setting parameters
