@@ -1,11 +1,11 @@
 authenticating `tweet-tweet`
 ----------------------------
 
-A few steps are required to set up a twitter account with OAuth.
+A few steps are required to set up a Twitter account with OAuth.
 
-Here are the steps to allow `tweet-tweet` to post on your twitter account:
+Here are the steps to allow `tweet-tweet` to post on your Twitter account:
 
-- Create an Application (This lets twitter know what is accessing your account.)
+- Create an Application (This lets Twitter know what is accessing your account.)
 	- Go to https://apps.twitter.com/app/new
 	- Fill out the form
 	- Click 'Yes, I agree'
@@ -18,6 +18,7 @@ Here are the steps to allow `tweet-tweet` to post on your twitter account:
 	- ...to a json file
 	- ...or to a javascript object
 
+twitter-config.json:
 ```json
 {
 	"consumerKey": "abc12",
