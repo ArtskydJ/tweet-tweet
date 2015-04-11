@@ -49,7 +49,7 @@ If you don't know how to get the tokens and secrets from twitter, see [AUTHENTIC
 	- If it is a string, it is the text of your status update.
 	- If it is an object, it can have the parameters specified [here][twitter-update-status-api].
 		- `status` - **Required.** The text of your status update. E.g. `'i love my cat. #cats'`
-		- `in_reply_to_status_id` - The ID of an existing status that the update is in reply to. Note that the author must me referenced in the `status`. E.g. `'@twitter'`
+		- `in_reply_to_status_id` - The ID of an existing status that the update is in reply to. Note that the author must be referenced in the `status`. E.g. `'@twitter'`
 		- `possibly_sensitive` - If the tweet contains nudity, violence, etc. you should set this to `true`. Defaults to `false`.
 		- For more parameters/information, see the [Twitter Update Status API][twitter-update-status-api].
 - `cb(err, response)` is an optional callback function. `response` is the parsed JSON response.
