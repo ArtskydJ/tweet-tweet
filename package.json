@@ -1,0 +1,25 @@
+{
+  "name": "tweet-tweet",
+  "version": "1.0.0",
+  "main": "./index.js",
+  "author": {
+    "name": "ArtskydJ",
+    "email": "josephdykstra@gmail.com"
+  },
+  "description": "A no-nonsense api for posting tweets.",
+  "keywords": [
+    "twitter",
+    "tweet",
+    "update",
+    "status"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArtskydJ/tweet-tweet"
+  },
+  "scripts": {},
+  "dependencies": {
+    "oauth": "^0.9.12"
+  },
+  "devDependencies": {}
+}
