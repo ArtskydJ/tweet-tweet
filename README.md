@@ -19,10 +19,10 @@ var tweet = TweetTweet({
 	accessTokenSecret: '...'
 })
 
-tweet('That awkward moment when you wake up... Said no one ever.')
+tweet('Never teach someone how to cartwheel beside a lake. #lessonlearned')
 
 setTimeout(function () {
-	tweet('Never teach someone how to cartwheel beside a lake. #fail #lessonlearned')
+	tweet('That awkward moment when you wake up... Said no one ever.')
 }, 60 * 1000)
 ```
 
@@ -47,12 +47,13 @@ If you don't know how to get the tokens and secrets from Twitter, see [AUTHENTIC
 
 - `status` is a string or an object
 	- If it is a string, it is the text of your status update.
-	- If it is an object, it can have the parameters specified [here][twitter-update-status-api].
+	- If it is an object, it can have the parameters specified in the [Twitter API][twitter-update-status-api] under the *Parameters* section.
 		- `status` - **Required.** The text of your status update. E.g. `'i love my cat. #cats'`
 		- `in_reply_to_status_id` - The ID of an existing status that the update is in reply to. Note that the author must be referenced in the `status`. E.g. `'@twitter'`
-		- `possibly_sensitive` - If the tweet contains nudity, violence, etc. you should set this to `true`. Defaults to `false`.
-		- For more parameters/information, see the [Twitter Update Status API][twitter-update-status-api].
-- `cb(err, response)` is an optional callback function. `response` is the parsed JSON response.
+		- `possibly_sensitive` - If the tweet contains nudity, violence, etc. set this to `true`. Defaults to `false`.
+- `cb(err, response)` is an optional callback function.
+	- `err` is an Error object or null.
+	- `response` is the parsed JSON response. See a sample response in the [Twitter API][twitter-update-status-api] under the *Example Result* section.
 
 ```js
 // Status string vs. status object
