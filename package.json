@@ -21,5 +21,6 @@
   "dependencies": {
     "oauth": "^0.9.12"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "license": "VOL"
 }
