@@ -1,6 +1,8 @@
 tweet-tweet
 =========
 
+[![Build Status](https://travis-ci.org/ArtskydJ/tweet-tweet.svg)](https://travis-ci.org/ArtskydJ/tweet-tweet)
+
 A no-nonsense api for posting tweets.
 
 This is *only* for updating your Twitter status. This does not get tweets, or stream search results.
@@ -51,7 +53,7 @@ If you don't know how to get the tokens and secrets from Twitter, see [AUTHENTIC
 		- `status` - **Required.** The text of your status update. E.g. `'i love my cat. #cats'`
 		- `in_reply_to_status_id` - The ID of an existing status that the update is in reply to. Note that the author must be referenced in the `status`. E.g. `'@twitter'`
 		- `possibly_sensitive` - If the tweet contains nudity, violence, etc. set this to `true`. Defaults to `false`.
-- `cb(err, response)` is an optional callback function.
+- `cb(err, response)` is an optional callback function. If no callback is given, errors will be thrown.
 	- `err` is an Error object or null.
 	- `response` is the parsed JSON response. See a sample response in the [Twitter API][twitter-update-status-api] under the *Example Result* section.
 
