@@ -24,6 +24,8 @@
     "oauth": "^0.9.12"
   },
   "devDependencies": {
+    "random-uuid-v4": "0.0.4",
+    "request": "^2.55.0",
     "tape": "^4.0.0",
     "xtend": "^4.0.0"
   },
