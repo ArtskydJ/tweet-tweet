@@ -1,7 +1,10 @@
-var auth = null
 try {
-	auth = require('./config.json')
+	module.exports = require('./config.json')
 } catch (e) {
-	auth = JSON.parse(process.env.TWITTER_AUTH)
+	module.exports = {
+		consumerKey: process.env.TWITTER_CK,
+		consumerSecret: process.env.TWITTER_CS,
+		accessToken: process.env.TWITTER_AT,
+		accessTokenSecret: process.env.TWITTER_ATS,
+	}
 }
-module.exports = auth
