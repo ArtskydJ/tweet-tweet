@@ -12,7 +12,7 @@ try {
 
 if (auth instanceof Error) {
 	test('missing authentication configuration', function (t) {
-		t.equal(auth.message, 'Error: Cannot find module \'./config.json\'', auth.message)
+		t.equal(auth.message, 'Cannot find module \'./config.json\'', auth.message)
 		t.end()
 	})
 } else {
