@@ -18,7 +18,7 @@ Here are the steps to allow `tweet-tweet` to post on your Twitter account:
 	- ...to a json file
 	- ...or to a javascript object
 
-twitter-config.json:
+*twitter-config.json*
 ```json
 {
 	"consumerKey": "abc12",
@@ -28,6 +28,7 @@ twitter-config.json:
 }
 ```
 
+*easy-tweet.js*
 ```js
 var TweetTweet = require('tweet-tweet')
 var twitterConfig = require('./twitter-config.json')
@@ -38,6 +39,7 @@ tweet('that was easy')
 
 Or if you want to be hated by everyone who comes across your code:
 
+*pathetic.js*
 ```js
 require('tweet-tweet')
 (require('./twitter-config.json'))
