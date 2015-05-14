@@ -2,6 +2,8 @@ tweet-tweet
 =========
 
 [![Build Status](https://travis-ci.org/ArtskydJ/tweet-tweet.svg)](https://travis-ci.org/ArtskydJ/tweet-tweet)
+[![Dependency Status](https://david-dm.org/artskydj/tweet-tweet.svg)](https://david-dm.org/artskydj/tweet-tweet)
+[![devDependency Status](https://david-dm.org/artskydj/tweet-tweet/dev-status.svg)](https://david-dm.org/artskydj/tweet-tweet#info=devDependencies)
 
 A no-nonsense api for posting tweets.
 
