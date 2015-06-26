@@ -45,7 +45,7 @@ If you don't know how to get the tokens and secrets from Twitter, see [AUTHENTIC
 	- `consumerSecret`
 	- `accessToken`
 	- `accessTokenSecret`
-- Returns `tweet()`.
+- Returns `tweet` function.
 
 ## `tweet(status, [cb])`
 
