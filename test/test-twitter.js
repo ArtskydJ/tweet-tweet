@@ -6,13 +6,13 @@ var auth = require('./helpers/auth.js')
 
 var tweet = TweetTweet(auth)
 
-test('posts to twitter', function (t) {
+test('no cb', function (t) {
 	var id = uuid()
 	tweet(id)
 	setTimeout(ensureTweetExists(t, id), 200) // Relatively consistent at 100ms
 })
 
-test('callback gets called', function (t) {
+test('cb', function (t) {
 	var id = uuid()
 	tweet(id, ensureTweetExists(t, id))
 })
@@ -47,7 +47,7 @@ function ensureTweetExists(t, id) {
 					exists = true
 				}
 			}).on('end', function () {
-				t.ok(exists, 'found id in twitter feed')
+				t.ok(exists, 'found id (' + id.slice(0, 8) + ') in twitter feed')
 				t.end()
 			})
 	}

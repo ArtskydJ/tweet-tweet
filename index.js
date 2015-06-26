@@ -17,21 +17,22 @@ module.exports = function TweetTweet(auth) {
 		var params = (typeof status === 'object') ? status : { status: status }
 
 		if (typeof params.status !== 'string') {
-			var err = new Error('Expected status to be a string')
+			var err = new Error('Expected status')
 			if (cb) setTimeout(cb, 0, err)
 			else throw err
 		} else {
-			if (!cb) cb = function thrw(err) { throw err }
 			oauth.post(STATUS_UPDATE_URL, auth.accessToken, auth.accessTokenSecret, params, function (err, data) {
-				if (err) {
-					cb(err)
-				} else {
-					try {
-						var parsed = JSON.parse(data)
-					} catch(e) {
-						err = e
+				if (cb) {
+					if (err) {
+						cb(err)
+					} else {
+						try {
+							var parsed = JSON.parse(data)
+						} catch(e) {
+							cb(e)
+						}
+						if (parsed) cb(null, parsed)
 					}
-					cb(err, parsed)
 				}
 			})
 		}
