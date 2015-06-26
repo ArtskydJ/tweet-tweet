@@ -14,12 +14,13 @@ module.exports = function TweetTweet(auth) {
 	var oauth = new OAuth(REQUEST_URL, ACCESS_URL, auth.consumerKey, auth.consumerSecret, '1.0A', null, 'HMAC-SHA1')
 
 	return function tweet(status, cb) {
-		if (!cb) cb = function (err) { throw err }
 		var params = (typeof status === 'object') ? status : { status: status }
 
 		if (typeof params.status !== 'string') {
-			setTimeout(cb, 0, new Error('Expected status to be a string'))
+			var err = new Error('Expected status to be a string')
+			cb ? setTimeout(cb, 0, err) : throw err
 		} else {
+			if (!cb) cb = function thrw(err) { throw err }
 			oauth.post(STATUS_UPDATE_URL, auth.accessToken, auth.accessTokenSecret, params, function (err, data) {
 				if (err) {
 					cb(err)
