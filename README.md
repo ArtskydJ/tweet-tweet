@@ -40,11 +40,7 @@ var TweetTweet = require('tweet-tweet')
 
 If you don't know how to get the tokens and secrets from Twitter, see [AUTHENTICATION.md](https://github.com/ArtskydJ/tweet-tweet/blob/master/AUTHENTICATION.md) for detailed instructions.
 
-- `auth` is an object with the following properties, all of which are required:
-	- `consumerKey`
-	- `consumerSecret`
-	- `accessToken`
-	- `accessTokenSecret`
+- `auth` is an object with `consumerKey`, `consumerSecret`, `accessToken`, and `accessTokenSecret`
 - Returns `tweet`
 
 ## `tweet(status, [cb])`
@@ -64,24 +60,31 @@ If you don't know how to get the tokens and secrets from Twitter, see [AUTHENTIC
 tweet('i like Twitter')
 // Equivalent
 tweet({ status: 'i like Twitter' })
+```
 
-
+```js
 // Setting parameters
 tweet({
 	status: 'not for weak stomachs: http://emergency-room-pictures.com',
 	possibly_sensitive: true
 })
+```
 
+```js
 tweet({
 	status: 'Happy birthday @twitter!',
 	in_reply_to_status_id: '579328173764014080'
 })
+```
 
+```js
 tweet('why is the sky blue?', function (err, res) {
 	if (err) throw err
 	else console.log(res)
 })
+```
 
+```js
 tweet({
 	status: 'People comment "lol" even when they do not laugh.'
 }, function (err, res) {
