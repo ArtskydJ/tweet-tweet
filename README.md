@@ -36,7 +36,7 @@ var TweetTweet = require('tweet-tweet')
 
 If you don't know how to get the tokens and secrets from Twitter, see [AUTHENTICATION.md](https://github.com/ArtskydJ/tweet-tweet/blob/master/AUTHENTICATION.md) for detailed instructions.
 
-- `auth` is an object with `consumerKey`, `consumerSecret`, `accessToken`, and `accessTokenSecret`
+- `auth` is an object with `consumerKey`, `consumerSecret`, `accessToken`, and `accessTokenSecret` properties
 - Returns `tweet`
 
 ## `tweet(status, [cb])`
@@ -45,7 +45,7 @@ If you don't know how to get the tokens and secrets from Twitter, see [AUTHENTIC
 	- If it is a string, it is the text of your status update.
 	- If it is an object, it can have the parameters specified in the [Twitter API][twitter-update-status-api] under the *Parameters* section.
 		- `status` - **Required.** The text of your status update. E.g. `'i love my cat. #cats'`
-		- `in_reply_to_status_id` - The ID of an existing status that the update is in reply to. Note that the author must be referenced in the `status`. E.g. `'@twitter'`
+		- `in_reply_to_status_id` - The ID of an existing status that the update is in reply to. Note that the author must be referenced in the `status`.
 		- `possibly_sensitive` - If the tweet contains nudity, violence, etc. set this to `true`. Defaults to `false`.
 - `cb(err, response)` is an optional callback function. If no callback is given, errors will be swallowed.
 	- `err` is an Error object or null.
@@ -68,15 +68,19 @@ tweet({
 
 ```js
 tweet({
-	status: 'Happy birthday @twitter!',
-	in_reply_to_status_id: '579328173764014080'
+	in_reply_to_status_id: '579328173764014080',
+	// https://twitter.com/Twitter/status/579328173764014080
+	status: 'Happy birthday @twitter!'
+	// Since the status that is being replied to is from the @twitter
+	// account, then "@twitter" must be included in the status
 })
 ```
 
 ```js
 tweet('why is the sky blue?', function (err, res) {
 	if (err) throw err
-	else console.log(res)
+	
+	console.log(res)
 })
 ```
 
@@ -85,7 +89,8 @@ tweet({
 	status: 'People comment "lol" even when they do not laugh.'
 }, function (err, res) {
 	if (err) throw err
-	else console.log(res)
+	
+	console.log(res)
 })
 ```
 
@@ -97,8 +102,7 @@ With [npm](http://nodejs.org/download) do:
 
 # license
 
-[VOL](http://veryopenlicense.com)
-
+[MIT](https://choosealicense.com/licenses/mit)
 
 
 [twitter-update-status-api]: https://dev.twitter.com/rest/reference/post/statuses/update
