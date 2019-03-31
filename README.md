@@ -105,4 +105,4 @@ With [npm](http://nodejs.org/download) do:
 [MIT](https://choosealicense.com/licenses/mit)
 
 
-[twitter-update-status-api]: https://dev.twitter.com/rest/reference/post/statuses/update
+[twitter-update-status-api]: https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update
